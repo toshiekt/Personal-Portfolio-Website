@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Favicon & Social Sharing (Open Graph) Meta Tags -->
+    <link rel="icon" type="image/jpeg" href="photo.jpg">
+    <meta name="description" content="Kenneth Gitonga — IT Support Specialist, Network Administrator, and Front-End React Developer based in Nairobi, Kenya.">
+    <meta property="og:title" content="Kenneth Gitonga | IT & Web Development Portfolio">
+    <meta property="og:description" content="BSc. Information Technology graduate specializing in React web development, Active Directory & network infrastructure, and hardware diagnostics.">
+    <meta property="og:image" content="photo.jpg">
+    <meta property="og:type" content="website">
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <title>Kenneth Gitonga | IT & Web Development Portfolio</title>
+</head>
+<body>
+    <div class="wrapper">
+        <nav class="nav">
+            <div class="nav-logo">
+                <p>TOSHIE<span>.DEV</span></p>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <ul>
+                    <li><a href="#home" class="link active" onclick="showSection('home', this)">Home</a></li>
+                    <li><a href="#projects" class="link" onclick="showSection('projects', this)">Projects</a></li>
+                    <li><a href="#blog" class="link" onclick="showSection('blog', this)">Blog</a></li>
+                    <li><a href="#services" class="link" onclick="showSection('services', this)">Services</a></li>
+                    <li><a href="#about" class="link" onclick="showSection('about', this)">About</a></li>
+                </ul>
+            </div>
+            <div class="nav-button">
+                <button class="btn white-btn" id="projectsBtn" onclick="showSection('projects')">My Work</button>
+                <button class="btn accent-btn" id="contactBtn" onclick="showSection('contact')">Hire Me</button>
+            </div>
+            <div class="nav-menu-btn">
+                <i class="bx bx-menu" onclick="myMenuFunction()"></i>
+            </div>
+        </nav>
+
+        <main class="main-content">
+            <!-- HOME SECTION -->
+            <section id="home" class="portfolio-section active-section">
+                <div class="glass-card hero-card">
+                    <div class="status-pill">
+                        <span class="status-dot"></span> Available for IT Support & Web Projects — Nairobi / Remote
+                    </div>
+                    <div class="profile-avatar-wrapper">
+                        <img src="photo.jpg" alt="Kenneth Gitonga" class="profile-avatar">
+                    </div>
+                    <span class="badge" id="rotatingRole">IT Specialist & Front-End Developer</span>
+                    <h1>Hi, I'm Kenneth Gitonga</h1>
+                    <p>BSc. Information Technology graduate based in Nairobi. I build responsive web applications, architect enterprise network labs, and manage end-to-end hardware & IT infrastructure.</p>
+                    
+                    <!-- Key Metrics Strip -->
+                    <div class="metrics-strip">
+                        <div class="metric-item">
+                            <strong>BSc. IT</strong>
+                            <span>KCA University</span>
+                        </div>
+                        <div class="metric-item">
+                            <strong>Full-Stack</strong>
+                            <span>React &amp; JS Builds</span>
+                        </div>
+                        <div class="metric-item">
+                            <strong>CCNA / AD</strong>
+                            <span>Enterprise Infra</span>
+                        </div>
+                    </div>
+
+                    <div class="hero-actions">
+                        <button class="submit accent-submit" onclick="showSection('projects')">View Projects</button>
+                        <a href="Kenneth_Gitonga_CV.pdf" download class="btn outline-btn download-link"><i class='bx bx-download'></i> Download CV</a>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://github.com/toshiekt" target="_blank" rel="noopener noreferrer" title="GitHub"><i class='bx bxl-github'></i></a>
+                        <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i class='bx bxl-linkedin'></i></a>
+                        <a href="#contact" onclick="showSection('contact')" title="Email Me"><i class='bx bx-envelope'></i></a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- PROJECTS SECTION -->
+            <section id="projects" class="portfolio-section">
+                <div class="section-header">
+                    <h2>Featured Projects</h2>
+                    <p>Live web builds, enterprise network labs, and software engineering work</p>
+                </div>
+                <div class="grid-container">
+                    <div class="glass-card item-card">
+                        <div>
+                            <div class="project-banner">
+                                <i class='bx bx-shopping-bag'></i>
+                            </div>
+                            <span class="tag">React &bull; Netlify</span>
+                            <h3>Sneaker Retail E-Commerce App</h3>
+                            <p>A dynamic storefront built with React custom state management hooks, real-time category/price filtering, cart drawer, and responsive product cards.</p>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/toshiekt" target="_blank" rel="noopener noreferrer" class="proj-btn"><i class='bx bxl-github'></i> Code</a>
+                            <a href="https://github.com/toshiekt" target="_blank" rel="noopener noreferrer" class="proj-btn accent-proj-btn"><i class='bx bx-link-external'></i> Live Site</a>
+                        </div>
+                    </div>
+
+                    <div class="glass-card item-card">
+                        <div>
+                            <div class="project-banner">
+                                <i class='bx bx-network-chart'></i>
+                            </div>
+                            <span class="tag">Windows Server &bull; VMware</span>
+                            <h3>Enterprise Active Directory Lab</h3>
+                            <p>Isolated multi-VM network environment implementing Active Directory Domain Services (AD DS), custom Group Policy Objects (GPOs), OUs, DNS, and DHCP.</p>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/toshiekt" target="_blank" rel="noopener noreferrer" class="proj-btn"><i class='bx bx-file'></i> Topology</a>
+                            <a href="#blog" onclick="openBlogModal(1); return false;" class="proj-btn accent-proj-btn"><i class='bx bx-book-open'></i> Case Study</a>
+                        </div>
+                    </div>
+
+                    <div class="glass-card item-card">
+                        <div>
+                            <div class="project-banner">
+                                <i class='bx bx-bus'></i>
+                            </div>
+                            <span class="tag">HTML5 &bull; CSS3 &bull; JavaScript</span>
+                            <h3>Online Bus Ticketing System</h3>
+                            <p>Full-featured seat reservation and route scheduling web application developed as a BSc. IT capstone project with dynamic fare calculation.</p>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/toshiekt" target="_blank" rel="noopener noreferrer" class="proj-btn"><i class='bx bxl-github'></i> GitHub</a>
+                            <a href="#contact" onclick="showSection('contact')" class="proj-btn accent-proj-btn"><i class='bx bx-info-circle'></i> Request Demo</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- BLOG SECTION -->
+            <section id="blog" class="portfolio-section">
+                <div class="section-header">
+                    <h2>Tech Insights & Case Studies</h2>
+                    <p>Notes on web development, networking, and system diagnostics</p>
+                </div>
+                <div class="grid-container">
+                    <article class="glass-card item-card">
+                        <div>
+                            <span class="tag">Web Development</span>
+                            <h3>Building a Dynamic React E-Commerce App</h3>
+                            <p>Lessons learned architecting custom state management hooks, product filtering, and deploying a high-speed sneaker storefront on Netlify.</p>
+                        </div>
+                        <a href="#blog" class="read-more" onclick="openBlogModal(0); return false;">Read full article <i class='bx bx-right-arrow-alt'></i></a>
+                    </article>
+                    <article class="glass-card item-card">
+                        <div>
+                            <span class="tag">Systems & Networking</span>
+                            <h3>Designing an Isolated Active Directory Lab</h3>
+                            <p>A walkthrough on setting up Windows Server, custom Group Policy Objects (GPOs), and Organizational Units inside VMware Workstation Pro.</p>
+                        </div>
+                        <a href="#blog" class="read-more" onclick="openBlogModal(1); return false;">Read full article <i class='bx bx-right-arrow-alt'></i></a>
+                    </article>
+                    <article class="glass-card item-card">
+                        <div>
+                            <span class="tag">Hardware & Diagnostics</span>
+                            <h3>Optimizing Custom Rigs & Low-Latency Setups</h3>
+                            <p>Component-level troubleshooting, thermal management, and network tuning for high-performance workstations and VR/sim setups.</p>
+                        </div>
+                        <a href="#blog" class="read-more" onclick="openBlogModal(2); return false;">Read full article <i class='bx bx-right-arrow-alt'></i></a>
+                    </article>
+                </div>
+            </section>
+
+            <!-- SERVICES SECTION -->
+            <section id="services" class="portfolio-section">
+                <div class="section-header">
+                    <h2>Services & Capabilities</h2>
+                    <p>Technical solutions tailored for individuals and growing businesses</p>
+                </div>
+                <div class="grid-container">
+                    <div class="glass-card item-card">
+                        <div>
+                            <i class='bx bx-code-alt service-icon'></i>
+                            <h3>Front-End Web Development</h3>
+                            <p>Responsive, modern interfaces built with React, JavaScript (ES6+), HTML5, and CSS3—deployed cleanly with Git and Netlify.</p>
+                        </div>
+                    </div>
+                    <div class="glass-card item-card">
+                        <div>
+                            <i class='bx bx-server service-icon'></i>
+                            <h3>IT Infrastructure & Networking</h3>
+                            <p>LAN setup, router/switch configuration, TCP/IP, DHCP/DNS management, Active Directory administration, and Microsoft 365 support.</p>
+                        </div>
+                    </div>
+                    <div class="glass-card item-card">
+                        <div>
+                            <i class='bx bx-wrench service-icon'></i>
+                            <h3>Hardware Diagnostics & Upgrades</h3>
+                            <p>Component-level laptop and desktop repairs, custom PC builds, RAM/SSD upgrades, and remote system maintenance.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ABOUT SECTION -->
+            <section id="about" class="portfolio-section">
+                <div class="glass-card about-card">
+                    <div class="about-header">
+                        <img src="photo.jpg" alt="Kenneth Gitonga" class="about-photo">
+                        <div class="about-bio">
+                            <h2>About Me</h2>
+                            <p>I am a versatile IT professional and front-end developer based in Nairobi with a Bachelor of Science in Information Technology from KCA University and a Google IT Support Professional Certificate.</p>
+                            <p>Whether I am building interactive user interfaces in React, administering Windows/Linux environments, or diagnosing complex hardware faults, I focus on reliability, speed, and clean execution.</p>
+                        </div>
+                    </div>
+
+                    <!-- Technical Stack -->
+                    <div class="skills-grid">
+                        <div class="skill-group">
+                            <h4>Development</h4>
+                            <p>React, JavaScript, HTML5, CSS3, Git/GitHub, VS Code</p>
+                        </div>
+                        <div class="skill-group">
+                            <h4>Systems & Admin</h4>
+                            <p>Windows Server, Active Directory, Linux, M365, VMware</p>
+                        </div>
+                        <div class="skill-group">
+                            <h4>Networking & Support</h4>
+                            <p>CCNA Track, TCP/IP, Jira Service Desk, Hardware Repair</p>
+                        </div>
+                    </div>
+
+                    <!-- Experience & Education Timeline -->
+                    <div class="timeline-section">
+                        <h3>Experience &amp; Education</h3>
+                        <div class="timeline-list">
+                            <div class="timeline-item">
+                                <span class="timeline-date">2025 &ndash; 2026</span>
+                                <h4>Technical Support Specialist Intern &bull; Hameco Limited (Nairobi)</h4>
+                                <p>Managed on-site technical infrastructure, Wi-Fi networks, and simulator systems at Glitch VR and REV F1 (Village Market).</p>
+                            </div>
+                            <div class="timeline-item">
+                                <span class="timeline-date">Ongoing</span>
+                                <h4>IT &amp; Hardware Diagnostics Lead &bull; Ridtech Tech Solutions</h4>
+                                <p>Led component-level laptop/smartphone repairs, custom rig optimization, RAM/SSD upgrades, and remote system troubleshooting.</p>
+                            </div>
+                            <div class="timeline-item">
+                                <span class="timeline-date">Graduated July 2025</span>
+                                <h4>BSc. in Information Technology &bull; KCA University</h4>
+                                <p>Focused on systems design, network technologies, and distributed systems; built an Online Bus Ticketing System as final capstone.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Certifications Strip -->
+                    <div class="certs-strip">
+                        <div class="cert-badge"><i class='bx bxs-badge-check'></i> Google IT Support Professional Certificate</div>
+                        <div class="cert-badge"><i class='bx bx-certification'></i> Cisco CCNA Candidate</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CONTACT SECTION -->
+            <section id="contact" class="portfolio-section">
+                <div class="glass-card contact-card">
+                    <header>Get In Touch</header>
+                    <p class="contact-sub">Have a web project, IT support request, or collaboration in mind?</p>
+                    <form id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" onsubmit="handleContactSubmit(event)">
+                        <div class="two-forms">
+                            <div class="input-box">
+                                <input type="text" name="firstName" class="input-field" placeholder="First Name" required>
+                                <i class="bx bx-user"></i>
+                            </div>
+                            <div class="input-box">
+                                <input type="text" name="lastName" class="input-field" placeholder="Last Name" required>
+                                <i class="bx bx-user"></i>
+                            </div>
+                        </div>
+                        <div class="input-box">
+                            <input type="email" name="email" class="input-field" placeholder="Your Email" required>
+                            <i class="bx bx-envelope"></i>
+                        </div>
+                        <div class="input-box">
+                            <textarea name="message" class="input-field textarea-field" placeholder="Tell me about your project or inquiry..." required></textarea>
+                            <i class="bx bx-message-detail"></i>
+                        </div>
+                        <div class="input-box">
+                            <input type="submit" class="submit accent-submit" value="Send Message">
+                        </div>
+                        <p id="formFeedback" class="feedback-msg"></p>
+                    </form>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- BLOG READER MODAL -->
+    <div id="blogModal" class="modal-overlay" onclick="closeBlogModal(event)">
+        <div class="glass-card modal-box">
+            <button class="modal-close" onclick="closeBlogModal(event, true)">&times;</button>
+            <span id="modalTag" class="tag">Category</span>
+            <h2 id="modalTitle">Article Title</h2>
+            <div id="modalBody" class="modal-body"></div>
+        </div>
+    </div>
+
+    <script>
+        function myMenuFunction() {
+            var i = document.getElementById("navMenu");
+            if (i.className === "nav-menu") {
+                i.className += " responsive";
+            } else {
+                i.className = "nav-menu";
+            }
+        }
+
+        function showSection(sectionId, clickedLink) {
+            const sections = document.querySelectorAll('.portfolio-section');
+            sections.forEach(sec => sec.classList.remove('active-section'));
+
+            const target = document.getElementById(sectionId);
+            if (target) {
+                target.classList.add('active-section');
+            }
+
+            const links = document.querySelectorAll('.nav-menu .link');
+            links.forEach(link => link.classList.remove('active'));
+            
+            if (clickedLink) {
+                clickedLink.classList.add('active');
+            } else {
+                const matchingLink = document.querySelector(`.nav-menu a[href="#${sectionId}"]`);
+                if (matchingLink) matchingLink.classList.add('active');
+            }
+
+            const navMenu = document.getElementById("navMenu");
+            if (navMenu.className.includes("responsive")) {
+                navMenu.className = "nav-menu";
+            }
+        }
+
+        const roles = [
+            "IT Specialist & Front-End Developer",
+            "React & JavaScript UI Builder",
+            "Network & Systems Administrator",
+            "Hardware Diagnostics & Support Tech"
+        ];
+        let roleIndex = 0;
+        setInterval(() => {
+            const roleEl = document.getElementById("rotatingRole");
+            if (roleEl) {
+                roleEl.style.opacity = 0;
+                setTimeout(() => {
+                    roleIndex = (roleIndex + 1) % roles.length;
+                    roleEl.textContent = roles[roleIndex];
+                    roleEl.style.opacity = 1;
+                }, 300);
+            }
+        }, 3200);
+
+        const blogArticles = [
+            {
+                tag: "Web Development",
+                title: "Building a Dynamic React E-Commerce App",
+                content: "<p>Creating a responsive e-commerce storefront required clean component architecture and predictable state updates. By separating product filtering, cart calculations, and UI drawers into custom React hooks, re-renders stayed fast even with multi-attribute filters.</p><p>Finally, configuring automated Git-to-Netlify continuous deployment ensured every push went live with zero downtime.</p>"
+            },
+            {
+                tag: "Systems & Networking",
+                title: "Designing an Isolated Active Directory Lab",
+                content: "<p>To mirror a production enterprise domain safely, I segmented virtual switches inside VMware Workstation Pro and promoted a Windows Server instance to Domain Controller.</p><p>From there, I structured department-level Organizational Units (OUs), enforced password and desktop restrictions via Group Policy Objects (GPOs), and verified internal DNS/DHCP resolution across client machines.</p>"
+            },
+            {
+                tag: "Hardware & Diagnostics",
+                title: "Optimizing Custom Rigs & Low-Latency Setups",
+                content: "<p>High-throughput gaming and simulator environments expose bottlenecks quickly. Systematic diagnostics—starting from thermal throttling and power delivery checks down to RAM timings and NIC interrupt moderation—eliminate frame drops and network jitter.</p><p>Pairing clean airflow layouts with proactive firmware updates keeps workstation hardware reliable under sustained workloads.</p>"
+            }
+        ];
+
+        function openBlogModal(index) {
+            const article = blogArticles[index];
+            document.getElementById("modalTag").textContent = article.tag;
+            document.getElementById("modalTitle").textContent = article.title;
+            document.getElementById("modalBody").innerHTML = article.content;
+            document.getElementById("blogModal").classList.add("open");
+        }
+
+        function closeBlogModal(e, force) {
+            if (force || e.target.id === "blogModal") {
+                document.getElementById("blogModal").classList.remove("open");
+            }
+        }
+
+        async function handleContactSubmit(e) {
+            e.preventDefault();
+            const form = e.target;
+            const feedback = document.getElementById('formFeedback');
+
+            if (form.action.includes("YOUR_FORM_ID")) {
+                feedback.textContent = "Thanks for reaching out! (Tip: Add your Formspree ID in index.html to receive live emails.)";
+                form.reset();
+                return;
+            }
+
+            try {
+                const response = await fetch(form.action, {
+                    method: form.method,
+                    body: new FormData(form),
+                    headers: { 'Accept': 'application/json' }
+                });
+                if (response.ok) {
+                    feedback.textContent = "Message sent! I'll get back to you shortly.";
+                    form.reset();
+                } else {
+                    feedback.textContent = "Oops! There was a problem submitting your form.";
+                }
+            } catch (error) {
+                feedback.textContent = "Network error. Please try again later.";
+            }
+        }
+    </script>
+</body>
+</html>
